@@ -23,4 +23,23 @@ export default class Api {
         let r = await api.get('/matricula')
         return r.data;
     }
+
+    async alterarAluno(idAluno, aluno, chamada, curso, turma) {
+
+        let alunoJson = {
+            nm_aluno: aluno,
+            nr_chamada: chamada,
+            nm_curso: curso,
+            nm_turma: turma
+        };
+        
+        let r = await api.put(`/matricula/${idAluno}`, alunoJson);
+        return r.data;
+    }
+
+
+    async deletarAluno(idAluno){
+        let r = api.delete(`/matricula/${idAluno}`)
+        return r.data;
+    }
 }

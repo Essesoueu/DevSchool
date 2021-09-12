@@ -20,6 +20,10 @@ app.get('/matricula', async (req, resp) => {
 app.post('/matricula', async (req, resp) => {
     try{
         let matricula = req.body;
+         let r = await db.tb_matricula.findOne({where:{nr_chamada: matricula.nr_chamada, nm_turma: matricula.nm_turma}});
+        if (r != null)
+            return resp.send({erro: "esse numero de chamada já existe fiote"});
+
         let aluno = {
             nm_aluno: matricula.nm_aluno,
             nr_chamada: matricula.nr_chamada,
@@ -41,6 +45,7 @@ app.put('/matricula/:id', async (req, resp) => {
         let matricu = req.body;
         let id = req.params.id;
 
+
         
         let alterando = await db.tb_matricula.update({
             nm_aluno: matricu.nm_aluno,
@@ -53,8 +58,9 @@ app.put('/matricula/:id', async (req, resp) => {
         })
 
         resp.sendStatus(200);
+        
     } catch (error) {
-        console.log(resp.send('vish fi, faz direito o bglh').toString());
+        console.log(resp.send('só pode numero que não seja negativo, e sem').toString());
     }
 })
 

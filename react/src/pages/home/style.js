@@ -99,11 +99,12 @@ width: 100%;
 }
 .tabela {
     display: flex;
-    width: 50em;
+    width: 65em;
     height: auto;
     background-color: blue;
     align-self: center;
     
+    margin-right: 1.8em;
 }
 
 table{
@@ -120,12 +121,13 @@ tr {
 }
 td{
     border-collapse: collapse;
-    background-color: #F5F5F5;
+    
 }
 
 td svg {
-    margin-left: 0.5em;
+    margin-left: 1em;
     margin-top: 0.4em;
+    margin-right: 0.3em;
 }
 .x {
     display: flex;
@@ -140,6 +142,19 @@ thead{
     
 }
 
+tr:hover {
+    .coluna-botao{
+        visibility: visible;
+    }
+}
+
+.coluna-botao{
+    visibility: hidden;
+}
+
+.int {
+    background-color: #ECE6F3;
+}
 .id {
     width: 5em;
     text-align: center;
@@ -149,27 +164,29 @@ thead{
 .nm {
     display: flex;
     text-align: start;
-    width: 18em;
+    width: 20em;
     border: none;
     padding-top: 0.8em;
 }
 
 .chamada{
-    width: 6em;
+    width: 7em;
     text-align: start;
     padding-top: 0.8em;
 }
 
 .turma {
-    width: 5em;
-    text-align: start;
-    padding-top: 0.8em;
-}
-
-.curso {
     width: 6em;
     text-align: start;
     padding-top: 0.8em;
+    margin-right: 5em;
+}
+
+.curso {
+    width: 7em;
+    text-align: start;
+    padding-top: 0.8em;
+    margin-left: 3em;
 }
 `
 

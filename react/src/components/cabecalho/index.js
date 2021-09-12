@@ -22,6 +22,8 @@ function Cabecalho2 (){
         const r = await api.listarAlunos();
         console.log(r);
     }
+
+    
     return (
         <ContainerCabecalho2>
             <div className="perfil">
