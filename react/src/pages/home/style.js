@@ -14,10 +14,10 @@ display: flex;
 flex-direction: column;
 background: linear-gradient(0deg, #F5F5F5, #F5F5F5), #F5F5F5;
 width: 100%;
-.cadastro{
+.cadastro {
     display: flex;
     align-self: center;
-    background-color: blue;
+    background-color: white;
     margin: 6em 0em;
 
     width: 70em;
@@ -95,7 +95,7 @@ width: 100%;
     flex-direction: column;
     align-self: center;
     width: 70em;
-    background-color: green;
+    background-color: white;
 }
 .tabela {
     display: flex;

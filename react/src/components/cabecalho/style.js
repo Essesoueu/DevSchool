@@ -40,7 +40,7 @@ const ContainerCabecalho2 = styled.div`
 display: flex;
 flex-direction: row;
 
-background-color: blue;
+background-color: white;
 
 justify-content: space-between;
 height: 7.5em;
